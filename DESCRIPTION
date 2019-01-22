@@ -1,0 +1,19 @@
+Package: rsyncFacility
+Type: Package
+Version: 0.1.0
+Date: 2019-01-22
+Title: rsyncFacility: Wrapper for Rsync
+Authors@R: c(person("Georg", "Schnabel", role = c("aut", "cre"),
+		     email = "georg.schnabel@nucleardata.com"))
+Author: Georg Schnabel [aut, cre],
+Maintainer: Georg Schnabel <georg.schnabel@nucleardata.com>
+Depends:
+    R (>= 3.1.0)
+Description: This package provides convenience functions to
+    execute rsync (linux) from R.
+License: GPL (>= 3)
+URL: https://www.r-project.org, https://github.com/gschnabel/rsyncFacility
+BugReports: https://github.com/gschnabel/rsyncFacility/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
