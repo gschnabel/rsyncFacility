@@ -76,7 +76,10 @@ initRsync <- function(login,password=NULL,pwfile=NULL,socket=NULL,
   createRsyncCmd <- function(src,dest,timeout.con,other.args=character(0)) {
     loadDefaults()
     stopifnot(is.numeric(timeout.con),all(!grepl("'",src,fixed=TRUE)),!grepl("'",dest,fixed=TRUE))
-    cmdstr <- paste0("sshpass -f '",pwfile,"' rsync ",
+    sshpass_prefix_cmd <- character(0)
+    if (!is.null(password) || !is.null(pwfile))
+        sshpass_prefix_cmd <- paste0("sshpass -f '",pwfile,"' ")
+    cmdstr <- paste0(sshpass_prefix_cmd, " rsync ",
                      if (!is.null(socket))
                        paste0("-e \"ssh -o 'ControlPath=",socket,"'\"")
                      else "",
