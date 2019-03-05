@@ -16,7 +16,7 @@ utility `sshpass` is needed in addition.
 If Git is present on the system, one way to install the package in a terminal window is:
 
 ```
-git clone https://github.com/gschnabel/interactiveSSH.git
+git clone https://github.com/gschnabel/rsyncFacility.git
 R CMD INSTALL rsyncFacility
 ```
 
